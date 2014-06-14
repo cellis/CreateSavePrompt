@@ -1,0 +1,6 @@
+[
+  {
+    "keys": ["super+f"],
+    "command": "save_prompt"
+  }
+]
