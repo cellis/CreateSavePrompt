@@ -1,0 +1,38 @@
+[
+  {
+    "caption": "Preferences",
+    "mnemonic": "n",
+    "id": "preferences",
+    "children":
+    [
+        {
+          "caption": "Package Settings",
+          "mnemonic": "P",
+          "id": "package-settings",
+          "children":
+          [
+             {
+                "caption": "Create Save Prompt",
+                "children": [
+                  {
+                    "command": "open_file",
+                    "args": {
+                      "file": "${packages}/SavePrompt/SavePrompt.sublime-settings"
+                    },
+                    "caption": "Settings - Default"
+                  },
+                  {
+                    "command": "open_file",
+                    "args": {
+                      "file": "${packages}/User/Default (OSX).sublime-settings",
+                      "platform": "OSX"
+                    },
+                    "caption": "Settings - User"
+                  }
+                ]
+             }
+          ]
+        }
+    ]
+  }
+]

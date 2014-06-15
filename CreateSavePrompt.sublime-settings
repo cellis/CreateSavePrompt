@@ -1,0 +1,4 @@
+{
+  "home_dir": "/Users/yourname/workspace", // you can set this to be your default
+  "use_first_line_as_file": true
+}
