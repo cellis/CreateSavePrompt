@@ -15,14 +15,10 @@ class CreateSavePromptCommand(sublime_plugin.TextCommand):
         else:
           return
 
-      # self.view.set_name(location)
       f = open(location, 'w', encoding='utf8')
       f.write(self.view.substr(sublime.Region(0, self.view.size())))
       f.close()
 
-      # self.set_scratch(True)
-
-      # self.set_scratch(False)
       self.view.set_scratch(True)
       self.view.window().run_command('close')
       self.window().open_file(location)
@@ -38,7 +34,7 @@ class CreateSavePromptCommand(sublime_plugin.TextCommand):
       self.s = sublime.load_settings("CreateSavePrompt.sublime-settings")
       print(self.s.get("home_dir"))
       print(self.view)
-      # self.window().run_command('hide_panel')
+
       use_first_line_as_file = self.s.get("use_first_line_as_file")
 
       folders = sublime.active_window().folders()
@@ -52,11 +48,7 @@ class CreateSavePromptCommand(sublime_plugin.TextCommand):
       if use_first_line_as_file:
         home_dir = os.path.join(home_dir, self.view.substr(self.view.line(0)))
 
-      print(self.view.settings().get('home_dir'))
-      print(self.window().project_data())
       self.window().show_input_panel("File Location:", home_dir, self.onFileEntered, None, None)
-
-
 
   def window(self):
     return sublime.active_window()
