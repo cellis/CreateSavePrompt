@@ -23,7 +23,7 @@
     // for all versions. If you do not specify a release, it is defaulted
     // to "*". See below for more detauls.
     {
-      "name": "CreateSavePrompt",
+      "name": "Create Save Prompt",
       "details": "https://github.com/cellis/CreateSavePrompt",
       "readme": "https://raw.github.com/cellis/CreateSavePrompt/master/README.md",
       "issues": "https://github.com/cellis/CreateSavePrompt/issues",
