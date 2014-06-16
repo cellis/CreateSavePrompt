@@ -25,7 +25,7 @@ Remember to remap the save key too:
 
 ```
 {
-  "keys": ["super+e"],
+  "keys": ["super+s"],
   "command": "save"
 }
 ```
