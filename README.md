@@ -21,6 +21,14 @@ Once it's accepted into the repo, you should be able to install it by opening th
     "command": "create_save_prompt"
   }
 ```
+Remember to remap the save key too:
+
+```
+{
+  "keys": ["super+e"],
+  "command": "save"
+}
+```
 
 * Should work on ST2, haven't tested yet.
 * May/probably won't work on windows (python pathing...). Send me a pull req if you want it to.
