@@ -15,9 +15,8 @@ class CreateSavePromptCommand(sublime_plugin.TextCommand):
         else:
           return
 
-      f = open(location, 'w', encoding='utf8')
-      f.write(self.view.substr(sublime.Region(0, self.view.size())))
-      f.close()
+      with open(location, 'w', encoding='utf8') as f:
+        f.write(self.view.substr(sublime.Region(0, self.view.size())))
 
       self.view.set_scratch(True)
       self.view.window().run_command('close')
@@ -32,8 +31,6 @@ class CreateSavePromptCommand(sublime_plugin.TextCommand):
       self.view.run_command("save")
     else:
       self.s = sublime.load_settings("CreateSavePrompt.sublime-settings")
-      print(self.s.get("home_dir"))
-      print(self.view)
 
       use_first_line_as_file = self.s.get("use_first_line_as_file")
 
