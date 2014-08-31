@@ -10,7 +10,7 @@ class CreateSavePromptCommand(sublime_plugin.TextCommand):
       if os.path.lexists(location):
         overwrite = sublime.ok_cancel_dialog("Destination exists. Overwrite?", "Overwrite")
         if overwrite:
-          from CreateSavePrompt.send2trash import send2trash
+          from .send2trash import send2trash
           send2trash(location)
         else:
           return
