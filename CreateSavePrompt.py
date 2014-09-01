@@ -1,6 +1,5 @@
 import sublime, sublime_plugin
-import os, shutil
-import threading, time
+import os
 
 class CreateSavePromptCommand(sublime_plugin.TextCommand):
   def onFileEntered(self, location):
