@@ -1,6 +1,6 @@
 [
   {
-    "keys": ["super+s"],
+    "keys": ["ctrl+s"],
     "command": "create_save_prompt"
   }
 ]
